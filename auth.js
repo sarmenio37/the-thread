@@ -1,7 +1,7 @@
 // The Thread — simple password gate
 // Password is hashed so it's not sitting in plaintext in the HTML
 (function () {
-  const HASH = '4a7ed4f0e08b6521c25d0e3fc6f6f7fc0bfe6b82c85bf43a9b66e9f7b9b2dc3a'; // sha256 of "thebox"
+  const HASH = '156c6cbb62a69bfc8fbb1e827997dd179bb3580ae01c8a4e7bd6fd0c3e36d548'; // sha256 of "thebox"
   const KEY = 'the-thread-auth';
 
   async function sha256(str) {
