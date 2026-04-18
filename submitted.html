@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Thread — Got it!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <script src="auth.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #f5f0eb; font-family: 'Inter', sans-serif; color: #2c2c2c; min-height: 100vh; display: flex; flex-direction: column; }
+    .header { background: #2c2c2c; color: #f5f0eb; text-align: center; padding: 48px 24px 40px; }
+    .header .label { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; opacity: 0.45; margin-bottom: 14px; }
+    .header h1 { font-family: 'Playfair Display', serif; font-size: clamp(32px, 6vw, 52px); font-weight: 400; letter-spacing: -1px; }
+    .content { flex: 1; display: flex; align-items: center; justify-content: center; padding: 48px 24px; }
+    .card { background: #fff; border-radius: 4px; padding: 48px 40px; text-align: center; max-width: 480px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .icon { font-size: 48px; margin-bottom: 24px; }
+    h2 { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 400; margin-bottom: 14px; }
+    p { font-size: 15px; font-weight: 300; color: #666; line-height: 1.8; margin-bottom: 12px; }
+    .back { display: inline-block; margin-top: 28px; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #999; text-decoration: none; border-bottom: 1px solid #ddd; padding-bottom: 2px; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="label">A letter between friends</div>
+    <h1>The Thread</h1>
+  </div>
+  <div class="content">
+    <div class="card">
+      <div class="icon">✉️</div>
+      <h2>Update received.</h2>
+      <p>We're waiting on the others — once all three are in, the newsletter compiles automatically.</p>
+      <p>You'll get an email with a link when it's ready.</p>
+      <a href="index.html" class="back">← Back to all issues</a>
+    </div>
+  </div>
+</body>
+</html>

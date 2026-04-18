@@ -17,21 +17,29 @@
 
     .container { max-width: 640px; margin: 0 auto; padding: 48px 24px 80px; }
 
-    /* Who are you */
     .who-section { margin-bottom: 40px; }
-    .who-section label { display: block; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #999; margin-bottom: 16px; }
+    .who-label { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #999; margin-bottom: 16px; display: block; }
     .who-cards { display: flex; gap: 12px; flex-wrap: wrap; }
-    .who-card { flex: 1; min-width: 160px; background: #fff; border: 2px solid #e8e0d8; border-radius: 4px; padding: 18px 16px; cursor: pointer; text-align: center; transition: all 0.15s; }
-    .who-card:hover { border-color: #b0a89e; }
-    .who-card.selected { border-color: #2c2c2c; background: #2c2c2c; color: #f5f0eb; }
-    .who-card .card-name { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; }
-    .who-card .card-city { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; opacity: 0.5; margin-top: 4px; }
+    .who-card { flex: 1; min-width: 140px; cursor: pointer; }
+    .who-card input[type="radio"] { display: none; }
+    .who-card-inner {
+      background: #fff; border: 2px solid #e8e0d8; border-radius: 4px;
+      padding: 18px 16px; text-align: center; transition: all 0.15s; cursor: pointer;
+    }
+    .who-card input[type="radio"]:checked + .who-card-inner {
+      border-color: #2c2c2c; background: #2c2c2c; color: #f5f0eb;
+    }
+    .who-card:hover .who-card-inner { border-color: #b0a89e; }
+    .card-name { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 700; }
+    .card-city { font-size: 11px; letter-spacing: 1px; text-transform: uppercase; opacity: 0.5; margin-top: 4px; }
 
-    /* Form fields */
+    .divider { display: flex; align-items: center; gap: 16px; margin: 40px 0; }
+    .divider .line { flex: 1; height: 1px; background: #c4b9ad; }
+    .divider span { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #999; }
+
     .field { margin-bottom: 32px; }
-    .field label { display: block; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #999; margin-bottom: 10px; }
-    .field .question { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 400; color: #2c2c2c; margin-bottom: 14px; line-height: 1.4; }
-    .field .question .month-tag { font-size: 11px; font-family: 'Inter', sans-serif; letter-spacing: 2px; text-transform: uppercase; color: #b0a89e; vertical-align: middle; margin-left: 8px; font-style: normal; }
+    .field .question { font-family: 'Playfair Display', serif; font-size: 20px; color: #2c2c2c; margin-bottom: 14px; line-height: 1.4; }
+    .field .month-tag { font-size: 11px; font-family: 'Inter', sans-serif; letter-spacing: 2px; text-transform: uppercase; color: #b0a89e; margin-left: 8px; font-style: normal; }
     textarea {
       width: 100%; padding: 16px 18px; font-size: 15px; font-family: 'Inter', sans-serif;
       font-weight: 300; line-height: 1.7; border: 1px solid #ddd; border-radius: 3px;
@@ -41,14 +49,12 @@
     textarea:focus { border-color: #2c2c2c; }
     textarea::placeholder { color: #bbb; }
 
-    /* Media note */
     .media-note { background: #fff; border: 1px solid #e8e0d8; border-radius: 3px; padding: 20px 22px; margin-bottom: 32px; }
-    .media-note .media-title { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #999; margin-bottom: 8px; }
+    .media-title { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #999; margin-bottom: 8px; }
     .media-note p { font-size: 14px; font-weight: 300; color: #666; line-height: 1.7; }
-    .media-note a { color: #2c2c2c; text-decoration: none; border-bottom: 1px solid #ccc; }
+    .media-note a { color: #2c2c2c; }
     .media-note .sms-option { margin-top: 10px; padding-top: 10px; border-top: 1px solid #f0ebe5; }
 
-    /* Submit */
     .submit-btn {
       width: 100%; padding: 18px; background: #2c2c2c; color: #f5f0eb;
       border: none; border-radius: 3px; font-size: 13px; letter-spacing: 3px;
@@ -56,20 +62,6 @@
       transition: opacity 0.15s;
     }
     .submit-btn:hover { opacity: 0.85; }
-    .submit-btn:disabled { opacity: 0.4; cursor: not-allowed; }
-
-    /* Success */
-    .success { display: none; text-align: center; padding: 64px 24px; }
-    .success .success-icon { font-size: 48px; margin-bottom: 24px; }
-    .success h2 { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 400; margin-bottom: 12px; }
-    .success p { font-size: 15px; font-weight: 300; color: #777; line-height: 1.7; }
-    .success a { color: #2c2c2c; }
-
-    .error-msg { color: #c0392b; font-size: 13px; margin-top: 12px; display: none; text-align: center; }
-
-    .divider { display: flex; align-items: center; gap: 16px; margin: 40px 0; }
-    .divider .line { flex: 1; height: 1px; background: #c4b9ad; }
-    .divider span { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #999; }
 
     .back-link { display: block; text-align: center; margin-top: 32px; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #999; text-decoration: none; }
   </style>
@@ -79,29 +71,46 @@
 <div class="header">
   <div class="label">A letter between friends</div>
   <h1>The Thread</h1>
-  <div class="sub" id="header-month">Loading...</div>
+  <div class="sub" id="header-month"></div>
 </div>
 
 <div class="container">
 
-  <div id="form-area">
+  <form action="https://formsubmit.co/assistantprax@gmail.com" method="POST">
+
+    <!-- Formsubmit config (hidden) -->
+    <input type="hidden" name="_subject" id="email-subject" value="The Thread — Update Submission"/>
+    <input type="hidden" name="_template" value="box"/>
+    <input type="hidden" name="_captcha" value="false"/>
+    <input type="hidden" name="_next" value="https://sarmenio37.github.io/the-thread/submitted.html"/>
+    <input type="hidden" name="month" id="month-field" value=""/>
+    <input type="hidden" name="rotating_question" id="rq-field" value=""/>
 
     <!-- Who are you -->
     <div class="who-section">
-      <label>Who are you?</label>
+      <span class="who-label">Who are you?</span>
       <div class="who-cards">
-        <div class="who-card" data-name="caroline" onclick="selectPerson(this)">
-          <div class="card-name">Caroline</div>
-          <div class="card-city">Bend, Oregon</div>
-        </div>
-        <div class="who-card" data-name="kyla" onclick="selectPerson(this)">
-          <div class="card-name">Kyla</div>
-          <div class="card-city">Columbus, Ohio</div>
-        </div>
-        <div class="who-card" data-name="sarah" onclick="selectPerson(this)">
-          <div class="card-name">Sarah</div>
-          <div class="card-city">Cleveland, Ohio</div>
-        </div>
+        <label class="who-card">
+          <input type="radio" name="name" value="Caroline" required/>
+          <div class="who-card-inner">
+            <div class="card-name">Caroline</div>
+            <div class="card-city">Bend, Oregon</div>
+          </div>
+        </label>
+        <label class="who-card">
+          <input type="radio" name="name" value="Kyla" required/>
+          <div class="who-card-inner">
+            <div class="card-name">Kyla</div>
+            <div class="card-city">Columbus, Ohio</div>
+          </div>
+        </label>
+        <label class="who-card">
+          <input type="radio" name="name" value="Sarah" required/>
+          <div class="who-card-inner">
+            <div class="card-name">Sarah</div>
+            <div class="card-city">Cleveland, Ohio</div>
+          </div>
+        </label>
       </div>
     </div>
 
@@ -110,125 +119,71 @@
     <!-- General update -->
     <div class="field">
       <div class="question">What's going on in your life this month?</div>
-      <textarea id="general" rows="7" placeholder="No format, no pressure — just what you'd say if we were actually on a call. Work, home, something funny, something hard, whatever's real right now."></textarea>
+      <textarea name="general_update" rows="7" required
+        placeholder="No format, no pressure — just what you'd say if we were actually on a call. Work, home, something funny, something hard, whatever's real right now."></textarea>
     </div>
 
     <!-- Rotating monthly question -->
     <div class="field">
-      <div class="question" id="rotating-question">Loading...</div>
-      <textarea id="rotating" rows="4" placeholder=""></textarea>
+      <div class="question" id="rotating-question"></div>
+      <textarea name="rotating_answer" rows="4" placeholder="Whatever comes to mind."></textarea>
     </div>
 
     <!-- Photos / videos note -->
     <div class="media-note">
       <div class="media-title">📎 Photos & Videos</div>
-      <p>Email photos and videos (under 25MB each) to <a href="mailto:assistantprax@gmail.com">assistantprax@gmail.com</a> — they'll be automatically added to your update in the newsletter.</p>
+      <p>Email photos and videos (under 25MB each) to <a href="mailto:assistantprax@gmail.com">assistantprax@gmail.com</a> — they'll be automatically added to your update.</p>
       <div class="sms-option">
-        <p>📱 <strong>Prefer to text?</strong> Text your update to <strong>+1 (877) 780-4236</strong> and it'll come through automatically.</p>
+        <p>📱 <strong>Prefer to text?</strong> Text your update to <strong>+1 (877) 780-4236</strong>. First time? Text <em>"I'm [your name]"</em> to register.</p>
       </div>
     </div>
 
-    <button class="submit-btn" id="submit-btn" onclick="submitUpdate()">Send My Update →</button>
-    <div class="error-msg" id="error-msg">Something went wrong — please try again or email assistantprax@gmail.com directly.</div>
-  </div>
-
-  <!-- Success state -->
-  <div class="success" id="success-area">
-    <div class="success-icon">✉️</div>
-    <h2>Update received.</h2>
-    <p>We're waiting on the others — once all three are in,<br/>the newsletter goes out automatically.</p>
-    <br/>
-    <a href="index.html">← Back to all issues</a>
-  </div>
+    <button type="submit" class="submit-btn">Send My Update →</button>
+  </form>
 
   <a class="back-link" href="index.html">← All issues</a>
-
 </div>
 
 <script>
-  const SUBMIT_URL = 'https://the-thread-api.loca.lt/submit';
-
   const ROTATING_QUESTIONS = {
-    1:  { q: 'What\'s one thing you\'re hoping for this year?', tag: 'January' },
-    2:  { q: 'What\'s been making you laugh lately?', tag: 'February' },
-    3:  { q: 'What\'s a habit you\'ve started — or finally broken?', tag: 'March' },
-    4:  { q: 'What\'s the last thing you did just for yourself?', tag: 'April' },
-    5:  { q: 'What does your summer look like from here?', tag: 'May' },
-    6:  { q: 'What\'s something you\'ve learned or unlearned recently?', tag: 'June' },
-    7:  { q: 'What\'s your favorite thing about where you live right now?', tag: 'July' },
-    8:  { q: 'What have you been listening to, reading, or obsessing over?', tag: 'August' },
-    9:  { q: 'What\'s changed for you since this time last year?', tag: 'September' },
-    10: { q: 'What are you looking forward to before the year ends?', tag: 'October' },
-    11: { q: 'What are you genuinely grateful for right now?', tag: 'November' },
-    12: { q: 'What was your highlight of the year?', tag: 'December' },
+    1:  'What\'s one thing you\'re hoping for this year?',
+    2:  'What\'s been making you laugh lately?',
+    3:  'What\'s a habit you\'ve started — or finally broken?',
+    4:  'What\'s the last thing you did just for yourself?',
+    5:  'What does your summer look like from here?',
+    6:  'What\'s something you\'ve learned or unlearned recently?',
+    7:  'What\'s your favorite thing about where you live right now?',
+    8:  'What have you been listening to, reading, or obsessing over?',
+    9:  'What\'s changed for you since this time last year?',
+    10: 'What are you looking forward to before the year ends?',
+    11: 'What are you genuinely grateful for right now?',
+    12: 'What was your highlight of the year?',
   };
 
   const now = new Date();
   const month = now.getMonth() + 1;
   const year = now.getFullYear();
-  const monthKey = `${year}-${String(month).padStart(2, '0')}`;
   const monthNames = ['January','February','March','April','May','June','July','August','September','October','November','December'];
   const monthLabel = monthNames[month - 1] + ' ' + year;
+  const monthKey = `${year}-${String(month).padStart(2, '0')}`;
+  const rq = ROTATING_QUESTIONS[month];
 
   document.getElementById('header-month').textContent = monthLabel + ' update';
+  document.getElementById('month-field').value = monthKey;
+  document.getElementById('rq-field').value = rq;
+  document.getElementById('email-subject').value = `The Thread — ${monthLabel} submission`;
 
-  const rq = ROTATING_QUESTIONS[month];
-  document.getElementById('rotating-question').innerHTML =
-    rq.q + ` <span class="month-tag">${rq.tag}</span>`;
+  const rqEl = document.getElementById('rotating-question');
+  rqEl.innerHTML = rq + ` <span class="month-tag">${monthNames[month-1]}</span>`;
 
-  let selectedPerson = null;
-
-  function selectPerson(el) {
-    document.querySelectorAll('.who-card').forEach(c => c.classList.remove('selected'));
-    el.classList.add('selected');
-    selectedPerson = el.dataset.name;
-  }
-
-  async function submitUpdate() {
-    if (!selectedPerson) {
-      alert('Please select who you are first.');
-      return;
-    }
-    const general = document.getElementById('general').value.trim();
-    if (!general) {
-      alert('Please add at least a general update before submitting.');
-      return;
-    }
-
-    const btn = document.getElementById('submit-btn');
-    btn.disabled = true;
-    btn.textContent = 'Sending...';
-
-    const rotating = document.getElementById('rotating').value.trim();
-    const content = {
-      name: selectedPerson,
-      month: monthKey,
-      submitted: new Date().toISOString(),
-      general,
-      rotating_question: rq.q,
-      rotating_answer: rotating,
-    };
-
-    try {
-      const resp = await fetch(SUBMIT_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(content),
+  // Update radio labels to highlight on click (visual touch)
+  document.querySelectorAll('.who-card input').forEach(radio => {
+    radio.addEventListener('change', () => {
+      document.querySelectorAll('.who-card input').forEach(r => {
+        r.closest('.who-card').querySelector('.who-card-inner').style.borderColor = '';
       });
-
-      if (resp.ok) {
-        document.getElementById('form-area').style.display = 'none';
-        document.getElementById('success-area').style.display = 'block';
-      } else {
-        throw new Error(await resp.text());
-      }
-    } catch (e) {
-      console.error(e);
-      btn.disabled = false;
-      btn.textContent = 'Send My Update →';
-      document.getElementById('error-msg').style.display = 'block';
-    }
-  }
+    });
+  });
 </script>
 
 </body>
