@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Thread — June 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <script src="../auth.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #f5f0eb; font-family: 'Inter', sans-serif; color: #2c2c2c; min-height: 100vh; }
+    .header { background: #2c2c2c; color: #f5f0eb; text-align: center; padding: 56px 24px 48px; }
+    .header .label { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; opacity: 0.55; margin-bottom: 16px; }
+    .header h1 { font-family: 'Playfair Display', serif; font-size: clamp(42px, 8vw, 72px); font-weight: 400; line-height: 1.1; letter-spacing: -1px; }
+    .header .edition { font-family: 'Playfair Display', serif; font-style: italic; font-size: 18px; opacity: 0.6; margin-top: 12px; }
+    .header .byline { margin-top: 28px; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.4; }
+    .header .names { margin-top: 6px; font-size: 14px; font-weight: 300; opacity: 0.7; letter-spacing: 0.5px; }
+    .container { max-width: 860px; margin: 0 auto; padding: 0 24px 80px; }
+    .section-label { display: flex; align-items: center; gap: 16px; margin: 56px 0 32px; }
+    .section-label .line { flex: 1; height: 1px; background: #c4b9ad; }
+    .section-label span { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #888; }
+    .person-card { background: #fff; border-radius: 4px; overflow: hidden; margin-bottom: 32px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .person-header { padding: 28px 36px 20px; border-bottom: 1px solid #f0ebe5; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .person-name { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; line-height: 1.1; }
+    .person-location { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: #999; margin-top: 5px; }
+    .person-emoji { font-size: 32px; line-height: 1; }
+    .person-body { padding: 28px 36px; }
+    .person-body p { font-size: 15px; line-height: 1.8; color: #3a3a3a; font-weight: 300; margin-bottom: 16px; }
+    .person-body p:last-child { margin-bottom: 0; }
+    .photo-strip { padding: 0 36px 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .photo { width: 200px; height: 150px; border-radius: 3px; object-fit: cover; background: #1a1a1a; }
+    .highlight { display: inline-block; background: #f5f0eb; border: 1px solid #e0d8cf; border-radius: 2px; padding: 8px 14px; font-size: 13px; color: #666; margin-bottom: 20px; }
+    .highlight strong { color: #2c2c2c; font-weight: 500; }
+    .collective { background: #2c2c2c; color: #f5f0eb; border-radius: 4px; padding: 40px; margin-top: 56px; text-align: center; }
+    .collective h2 { font-family: 'Playfair Display', serif; font-style: italic; font-size: 22px; font-weight: 400; opacity: 0.7; margin-bottom: 16px; }
+    .collective p { font-size: 15px; line-height: 1.9; font-weight: 300; opacity: 0.8; max-width: 560px; margin: 0 auto; }
+    .footer { text-align: center; padding: 40px 24px; font-size: 12px; color: #aaa; letter-spacing: 0.5px; }
+    .back-link { display: block; text-align: center; margin-top: 48px; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #999; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="label">A letter between friends</div>
+    <h1>The Thread</h1>
+    <div class="edition">June 2026</div>
+    <div class="byline">Written by</div>
+    <div class="names">Caroline · Kyla · Sarah</div>
+  </div>
+  <div class="container">
+    <div class="section-label"><div class="line"></div><span>This Month's Updates</span><div class="line"></div></div>
+    
+    <div class="person-card">
+      <div class="person-header">
+        <div>
+          <div class="person-name">Caroline</div>
+          <div class="person-location">📍 Bend, Oregon</div>
+        </div>
+        <div class="person-emoji">🏔️</div>
+      </div>
+      <div class="person-body">
+        <div class="highlight">✨ <strong>Highlight:</strong> Too busy living her best life to tell us about it 🏔️</div>
+        <p style="color:#999;font-style:italic;">Caroline did not submit her update this month. We sent a reminder on the 20th. We sent another on the 29th. The form was right there. Her email still works — we checked. We can only conclude that she is thriving so hard she simply cannot be bothered to tell us about it. Incredible. Unforgivable. We miss her.</p>
+      </div>
+      
+    </div>
+    <div class="person-card">
+      <div class="person-header">
+        <div>
+          <div class="person-name">Kyla</div>
+          <div class="person-location">📍 Columbus, Ohio</div>
+        </div>
+        <div class="person-emoji">🌷</div>
+      </div>
+      <div class="person-body">
+        <div class="highlight">✨ <strong>Highlight:</strong> Out in the field. Or just out. We may never know 🌿</div>
+        <p style="color:#999;font-style:italic;">Kyla did not submit her update this month. Somewhere in Ohio, a field study went long, or a construction project ran over, or perhaps a very compelling episode of something was on. We understand. We do not accept it. The natural world continues without her dispatch. Gerald the pothos probably submitted something. Kyla did not.</p>
+      </div>
+      
+    </div>
+    <div class="person-card">
+      <div class="person-header">
+        <div>
+          <div class="person-name">Sarah</div>
+          <div class="person-location">📍 Cleveland, Ohio</div>
+        </div>
+        <div class="person-emoji">⚽</div>
+      </div>
+      <div class="person-body">
+        <div class="highlight">✨ <strong>Highlight:</strong> Survived a travel whirlwind, salsa nights, and a toddler bed upgrade — all in June!</div>
+        <p>June was a whirlwind, to say the least! It kicked off with my company’s main conference, communityLive, in Orlando, where I led a panel and gave presentations. The hustle and bustle were worth it, and I managed to connect with some fantastic customers. However, my travel luck took a nosedive soon after — from flight cancellations to a red-eye drive from Detroit, it was chaos. But hey, I made it back home just in time to repack for Krakow, Poland. The travel gods weren’t done with me yet, as my bag decided to play hide and seek across continents. Still, I got to enjoy Polish cuisine and connect with coworkers worldwide. Pierogies and Polish beer? Yes, please!</p><p>Back home briefly before jetting off to Puerto Rico for the hiMSS conference, where I danced salsa into the night with coworkers. It was a month packed with trips, and Chris deserves a medal for holding down the fort with Vela. Speaking of Vela, she's now the proud owner of a big girl bed, and we passed her crib onto Jule and Dewey for their little one. We also enlisted our neighbor to tackle those nagging house projects that never seem to get done. This last week is all about catching up with family, taking Vela to the zoo with Kyla and Irie, and enjoying some downtime. Chris is off too, redoing the porch while Vela continues to splash about in her beloved swimming lessons. All in all, a wild, wonderful month, with Cookie's birthday shenanigans and breakfast with my sisters and mom to top it all off.</p>
+      </div>
+      <div class="photo-strip"><img class="photo" src="https://raw.githubusercontent.com/sarmenio37/the-thread/main/photos/june-2026/sarah/00.jpeg" alt="Photo from Sarah"/><img class="photo" src="https://raw.githubusercontent.com/sarmenio37/the-thread/main/photos/june-2026/sarah/01.jpeg" alt="Photo from Sarah"/><img class="photo" src="https://raw.githubusercontent.com/sarmenio37/the-thread/main/photos/june-2026/sarah/02.jpeg" alt="Photo from Sarah"/><img class="photo" src="https://raw.githubusercontent.com/sarmenio37/the-thread/main/photos/june-2026/sarah/03.jpeg" alt="Photo from Sarah"/><img class="photo" src="https://raw.githubusercontent.com/sarmenio37/the-thread/main/photos/june-2026/sarah/04.jpeg" alt="Photo from Sarah"/><img class="photo" src="https://raw.githubusercontent.com/sarmenio37/the-thread/main/photos/june-2026/sarah/05.jpeg" alt="Photo from Sarah"/><img class="photo" src="https://raw.githubusercontent.com/sarmenio37/the-thread/main/photos/june-2026/sarah/06.jpeg" alt="Photo from Sarah"/><img class="photo" src="https://raw.githubusercontent.com/sarmenio37/the-thread/main/photos/june-2026/sarah/07.jpeg" alt="Photo from Sarah"/><img class="photo" src="https://raw.githubusercontent.com/sarmenio37/the-thread/main/photos/june-2026/sarah/08.jpeg" alt="Photo from Sarah"/><img class="photo" src="https://raw.githubusercontent.com/sarmenio37/the-thread/main/photos/june-2026/sarah/09.jpeg" alt="Photo from Sarah"/><img class="photo" src="https://raw.githubusercontent.com/sarmenio37/the-thread/main/photos/june-2026/sarah/10.jpeg" alt="Photo from Sarah"/><img class="photo" src="https://raw.githubusercontent.com/sarmenio37/the-thread/main/photos/june-2026/sarah/11.jpeg" alt="Photo from Sarah"/></div>
+    </div>
+    <div class="collective">
+      <h2>A note from all three of us</h2>
+      <p>As June waves goodbye, we're left with a delightful irony: while Caroline and Kyla have vanished into their own mysterious adventures, Sarah's whirlwind of travel reminds us how sometimes the best journeys are the ones we don't document. Here's to thriving in chaos, whether on a silent escapade or a Polish pierogi tour. Until next month, may our inboxes be full and our updates, well, existent.</p>
+    </div>
+    <a class="back-link" href="../index.html">← All issues</a>
+  </div>
+  <div class="footer">The Thread · A private letter between friends<br/>Compiled with care · June 2026</div>
+</body>
+</html>
