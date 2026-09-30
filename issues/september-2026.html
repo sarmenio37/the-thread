@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Thread — September 2026</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <script src="../auth.js"></script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #f5f0eb; font-family: 'Inter', sans-serif; color: #2c2c2c; min-height: 100vh; }
+    .header { background: #2c2c2c; color: #f5f0eb; text-align: center; padding: 56px 24px 48px; }
+    .header .label { font-size: 11px; letter-spacing: 4px; text-transform: uppercase; opacity: 0.55; margin-bottom: 16px; }
+    .header h1 { font-family: 'Playfair Display', serif; font-size: clamp(42px, 8vw, 72px); font-weight: 400; line-height: 1.1; letter-spacing: -1px; }
+    .header .edition { font-family: 'Playfair Display', serif; font-style: italic; font-size: 18px; opacity: 0.6; margin-top: 12px; }
+    .header .byline { margin-top: 28px; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; opacity: 0.4; }
+    .header .names { margin-top: 6px; font-size: 14px; font-weight: 300; opacity: 0.7; letter-spacing: 0.5px; }
+    .container { max-width: 860px; margin: 0 auto; padding: 0 24px 80px; }
+    .section-label { display: flex; align-items: center; gap: 16px; margin: 56px 0 32px; }
+    .section-label .line { flex: 1; height: 1px; background: #c4b9ad; }
+    .section-label span { font-size: 10px; letter-spacing: 3px; text-transform: uppercase; color: #888; }
+    .person-card { background: #fff; border-radius: 4px; overflow: hidden; margin-bottom: 32px; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+    .person-header { padding: 28px 36px 20px; border-bottom: 1px solid #f0ebe5; display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    .person-name { font-family: 'Playfair Display', serif; font-size: 26px; font-weight: 700; line-height: 1.1; }
+    .person-location { font-size: 12px; letter-spacing: 1.5px; text-transform: uppercase; color: #999; margin-top: 5px; }
+    .person-emoji { font-size: 32px; line-height: 1; }
+    .person-body { padding: 28px 36px; }
+    .person-body p { font-size: 15px; line-height: 1.8; color: #3a3a3a; font-weight: 300; margin-bottom: 16px; }
+    .person-body p:last-child { margin-bottom: 0; }
+    .photo-strip { padding: 0 36px 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .photo { width: 200px; height: 150px; border-radius: 3px; object-fit: cover; background: #1a1a1a; }
+    .highlight { display: inline-block; background: #f5f0eb; border: 1px solid #e0d8cf; border-radius: 2px; padding: 8px 14px; font-size: 13px; color: #666; margin-bottom: 20px; }
+    .highlight strong { color: #2c2c2c; font-weight: 500; }
+    .collective { background: #2c2c2c; color: #f5f0eb; border-radius: 4px; padding: 40px; margin-top: 56px; text-align: center; }
+    .collective h2 { font-family: 'Playfair Display', serif; font-style: italic; font-size: 22px; font-weight: 400; opacity: 0.7; margin-bottom: 16px; }
+    .collective p { font-size: 15px; line-height: 1.9; font-weight: 300; opacity: 0.8; max-width: 560px; margin: 0 auto; }
+    .footer { text-align: center; padding: 40px 24px; font-size: 12px; color: #aaa; letter-spacing: 0.5px; }
+    .back-link { display: block; text-align: center; margin-top: 48px; font-size: 12px; letter-spacing: 2px; text-transform: uppercase; color: #999; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="label">A letter between friends</div>
+    <h1>The Thread</h1>
+    <div class="edition">September 2026</div>
+    <div class="byline">Written by</div>
+    <div class="names">Caroline · Kyla · Sarah</div>
+  </div>
+  <div class="container">
+    <div class="section-label"><div class="line"></div><span>This Month's Updates</span><div class="line"></div></div>
+    
+    <div class="person-card">
+      <div class="person-header">
+        <div>
+          <div class="person-name">Caroline</div>
+          <div class="person-location">📍 Bend, Oregon</div>
+        </div>
+        <div class="person-emoji">🏔️</div>
+      </div>
+      <div class="person-body">
+        <div class="highlight">✨ <strong>Highlight:</strong> Too busy living her best life to tell us about it 🏔️</div>
+        <p style="color:#999;font-style:italic;">Caroline did not submit her update this month. We sent a reminder on the 20th. We sent another on the 29th. The form was right there. Her email still works — we checked. We can only conclude that she is thriving so hard she simply cannot be bothered to tell us about it. Incredible. Unforgivable. We miss her.</p>
+      </div>
+      
+    </div>
+    <div class="person-card">
+      <div class="person-header">
+        <div>
+          <div class="person-name">Kyla</div>
+          <div class="person-location">📍 Columbus, Ohio</div>
+        </div>
+        <div class="person-emoji">🌷</div>
+      </div>
+      <div class="person-body">
+        <div class="highlight">✨ <strong>Highlight:</strong> Survived a pumpkin patch field trip with 50 kids and accidentally killed my porch mums—so yeah, it's fall!</div>
+        <p>It's a bit surreal to be chaperoning 50 kindergarteners on their first school field trip to the pumpkin patch. It feels like just yesterday I was sipping on a Four Loko as a weekday pregame while watching 'Jersey Shore' with my roommates or downing a pitcher of beer to help my team avoid last place in the Beer Olympics. Life has this funny way of sneaking up on you—15 years really do fly by, don’t they?</p><p>We finally have a deck with actual furniture! Not that I’ve had much chance to enjoy it, thanks to Mother Nature being, well, let's just say uncooperative.</p><p>I crashed a surprise 40th birthday party for the legendary Sharissa. Watching our five-year-old girls become best friends was the highlight. I even took a green tea shot with the birthday girl at 4 PM. Woof. It was super fun catching up—her family is a hoot! Who would have thought she’d be coaching kids' soccer, of all things? Hahaha.</p><p>Between mussel surveys, Buckeyes football, and unintentionally committing mum-murder on my porch, I can confidently say it’s fall, y’all!</p>
+      </div>
+      
+    </div>
+    <div class="person-card">
+      <div class="person-header">
+        <div>
+          <div class="person-name">Sarah</div>
+          <div class="person-location">📍 Cleveland, Ohio</div>
+        </div>
+        <div class="person-emoji">⚽</div>
+      </div>
+      <div class="person-body">
+        <div class="highlight">✨ <strong>Highlight:</strong> Survived a Jeep repair and a toddler's roller coaster demands—onward to date night with Modest Mouse!</div>
+        <p>I'm writing this slightly tipsy on a flight back from Baltimore, where I had an impromptu meeting with a rather disgruntled customer. Despite a few hiccups—like missing my flight from NYC and dealing with three production down issues—September's been pretty good. I'm in a position where I finally feel like I can make a difference and push initiatives forward.</p><p>On the personal front, Vela is growing like a weed and fills our days with joy. We took her to Cedar Point, where she declared the first ride 'too slow' before diving headfirst into the roller coasters. She’s made a new friend, Veronica, and is loving soccer, Little Gym, and swimming lessons. Chris is busy gearing up for ski patrol and even whipped up an e-commerce system for the ski swap. My sister's emergency GI surgery was a scare, but she's alright now.</p><p>I had my own adventure replacing the shocks on my Jeep—rusty bolts and all—and Chris is almost done with the porch. We’re off to a Modest Mouse concert for a much-needed date night. On the social scene, birthday parties remain a maze of parents I don't know, but Vela had a blast at Harper's. Chris isn't sleeping well, thanks to the beats from the Flats bars. We're considering a move, but with interest rates in flux, we're holding out until spring.</p><p>In quieter moments, we enjoyed the airshow from our boat, sharing the experience with both family and friends. My memoir is inching along, and attending WITCON without any planning duties was a refreshing change. Kira, our shedding dog, continues to dream puppy dreams. Meanwhile, Chris and I are dreaming of a quieter fall and winter.</p>
+      </div>
+      
+    </div>
+    <div class="collective">
+      <h2>A note from all three of us</h2>
+      <p>As September breezes by, we're struck by the whirlwind of life's stages—from Kyla's kindergarten adventures to Sarah navigating parenting and career twists, all while Caroline's radio silence hints at life's vibrant chaos. Whether we're chasing toddlers or roller coasters, or just catching our breath, it seems we're all thriving in our own unpredictable ways. Here's to the joys, surprises, and a few green tea shots along the way!</p>
+    </div>
+    <a class="back-link" href="../index.html">← All issues</a>
+  </div>
+  <div class="footer">The Thread · A private letter between friends<br/>Compiled with care · September 2026</div>
+</body>
+</html>
